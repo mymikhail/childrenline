@@ -1,0 +1,31 @@
+REATE TABLE book (
+book_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+title varchar(255) NOT NULL DEFAULT '',
+description text,
+author_id int(10) unsigned NOT NULL,
+status tinyint(1) unsigned NOT NULL,
+date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (book_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE author (
+author_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+name varchar(255) NOT NULL DEFAULT '',
+PRIMARY KEY (author_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE book_m (
+book_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+title varchar(255) NOT NULL DEFAULT '',
+description text,
+author_id int(10) unsigned NOT NULL,
+status tinyint(1) unsigned NOT NULL,
+date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (book_id)
+) ENGINE=myisam DEFAULT CHARSET=utf8;
+
+CREATE TABLE author_m (
+author_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+name varchar(255) NOT NULL DEFAULT '',
+PRIMARY KEY (author_id)
+) ENGINE=myisam DEFAULT CHARSET=utf8;
